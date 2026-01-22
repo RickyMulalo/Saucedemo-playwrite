@@ -29,4 +29,6 @@ export class InventoryPage extends BasePage {
   async gotoCart() {
     await this.safeClick(this.cartLink);
   }
+
+
 }
