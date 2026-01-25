@@ -34,7 +34,7 @@ baseURL: 'https://www.saucedemo.com',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
     trace: 'retain-on-failure',
-    headless: false
+    headless: true
 
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
