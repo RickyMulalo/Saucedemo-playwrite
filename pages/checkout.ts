@@ -12,17 +12,17 @@ export class CheckoutPage extends BasePage {
   constructor(page: Page) {
     super(page);
     this.titleStepOne = page.getByText('Checkout: Your Information', { exact: true });
-    this.firstName = page.getByTestId('first-name');
-    this.lastName = page.getByTestId('last-name');
-    this.postalCode = page.getByTestId('postal-code');
+    this.firstName = page.getByTestId('firstName');
+    this.lastName = page.getByTestId('lastName');
+    this.postalCode = page.getByTestId('postalCode');
     this.continueButton = page.getByTestId('continue');
   }
 
   async fillCustomerInfo(first: string, last: string, zip: string) {
     await expect(this.titleStepOne).toBeVisible();
-    await this.firstName.fill(first);
-    await this.lastName.fill(last);
-    await this.postalCode.fill(zip);
+    await this.firstName.fill('Mulalo');
+    await this.lastName.fill('Mulaudzi');
+    await this.postalCode.fill('2000');
     await this.safeClick(this.continueButton);
   }
 }
